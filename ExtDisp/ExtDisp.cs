@@ -38,6 +38,9 @@ namespace ExtDisp
                 sb.AppendFormat("X:{0},", vessel.ctrlState.X);
                 sb.AppendFormat("Y:{0},", vessel.ctrlState.Y);
                 sb.AppendFormat("Z:{0},", vessel.ctrlState.Z);
+                sb.AppendFormat("pitch:{0},", vessel.ctrlState.pitch);
+                sb.AppendFormat("yaw:{0},", vessel.ctrlState.yaw);
+                sb.AppendFormat("roll:{0},", vessel.ctrlState.roll);
                 sb.AppendFormat("ApA:{0},", vessel.orbit.ApA);
                 sb.AppendFormat("PeA:{0},", vessel.orbit.PeA);
                 sb.AppendFormat("Vel:{0}", vessel.orbit.vel);
@@ -47,6 +50,10 @@ namespace ExtDisp
                 //print(sb);
             }
             else print("Ready: " + FlightGlobals.ready + " & ActiveVessel:" + FlightGlobals.ActiveVessel);
+        }
+        public void OnApplicationQuit()
+        {
+            ws.Stop();
         }
     }
 }
