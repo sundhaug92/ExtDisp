@@ -49,7 +49,7 @@ namespace ExtDisp
                 ws.Broadcast(sb.ToString());
                 //print(sb);
             }
-            else print("Ready: " + FlightGlobals.ready + " & ActiveVessel:" + FlightGlobals.ActiveVessel);
+            //else print("Ready: " + FlightGlobals.ready + " & ActiveVessel:" + FlightGlobals.ActiveVessel);
         }
         public void OnApplicationQuit()
         {
